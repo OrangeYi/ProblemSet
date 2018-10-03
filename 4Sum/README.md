@@ -16,12 +16,9 @@ A solution set is:
   [-2,  0, 0, 2]
 ]
 ```
-<<<<<<< HEAD:4Sum/README.me
 
 ###### use bf
 This is the way use 4 for loop to get the result which is O^4
 
 ###### The other way
 I reuse the method in 3sum and wrap another loop in outter and the runtime should be o^3
-=======
->>>>>>> e9769d885d0c59fabe33baf25717ef16b1a66113:4Sum/README.md
