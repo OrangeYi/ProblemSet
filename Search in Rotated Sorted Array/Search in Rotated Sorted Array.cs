@@ -1,50 +1,61 @@
 public class Solution {
     public int Search(int[] nums, int target) {
-        int hi = nums.Length - 1;
-        if(hi == -1) return -1;//check empty array
+        int length = nums.Length;
+        if(length == 0) return -1;
         
-        int index = hi / 2;
-        int lo = 0;
-        while(index >= 0){
-            if(nums[index] == target){
-                return index;
+        int hi = length - 1, lo = 0;
+        while(lo < hi){
+            int mid = (lo + hi) / 2;
+            if(nums[mid] > nums[hi]){
+                lo = mid + 1;
+            }else{
+                hi = mid;
             }
-            if(nums[lo] == target){
-                return lo;
+        }
+        int smallest = lo;
+        if(nums[smallest] == target) return smallest;
+        if(nums[0] == target) return 0;
+        if(nums[length - 1] == target) return length - 1;
+        lo = target > nums[0] ? 0 : smallest + 1;
+        hi = target > nums[length - 1] ? smallest - 1 : length - 1;
+        while(lo <= hi){
+            int mid = (lo + hi) / 2;
+            if(target == nums[mid]) return mid;
+            if(target > nums[mid]){
+                lo = mid + 1;
+            }else{
+                hi = mid - 1;
             }
-            if(nums[hi] == target){
-                return hi;
+        }
+        return -1;
+    }
+}public class Solution {
+    public int Search(int[] nums, int target) {
+        int length = nums.Length;
+        if(length == 0) return -1;
+        
+        int hi = length - 1, lo = 0;
+        while(lo < hi){
+            int mid = (lo + hi) / 2;
+            if(nums[mid] > nums[hi]){
+                lo = mid + 1;
+            }else{
+                hi = mid;
             }
-            if((hi - lo) <= 1) break;//if only have 2 element to compare and neither not match then break
-            
-            if(target > nums[index]){
-                if(nums[lo] > nums[index]){
-                    lo = index;
-                    index = (hi + lo) / 2;
-                    continue;
-                }else{
-                    lo = index;
-                    index = (hi + lo) / 2;
-                    continue;
-                }
-            }
-            if(target < nums[index]){
-                if(nums[lo] > nums[index]){
-                    hi = index;
-                    index = (hi + lo) / 2;
-                    continue;
-                }else{
-                    if(target > nums[hi]){
-                        hi = index;
-                        index = (hi + lo) / 2;
-                        continue;
-                    }else{
-                        lo = index;
-                        index = (hi + lo) / 2;
-                        continue;
-                    }       
-                }
-                
+        }
+        int smallest = lo;
+        if(nums[smallest] == target) return smallest;
+        if(nums[0] == target) return 0;
+        if(nums[length - 1] == target) return length - 1;
+        lo = target > nums[0] ? 0 : smallest + 1;
+        hi = target > nums[length - 1] ? smallest - 1 : length - 1;
+        while(lo <= hi){
+            int mid = (lo + hi) / 2;
+            if(target == nums[mid]) return mid;
+            if(target > nums[mid]){
+                lo = mid + 1;
+            }else{
+                hi = mid - 1;
             }
         }
         return -1;
