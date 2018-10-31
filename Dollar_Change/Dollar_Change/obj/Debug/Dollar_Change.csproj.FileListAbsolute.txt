@@ -1,0 +1,7 @@
+D:\vs projecs\Dollar_Change\Dollar_Change\bin\Debug\Dollar_Change.exe.config
+D:\vs projecs\Dollar_Change\Dollar_Change\bin\Debug\Dollar_Change.exe
+D:\vs projecs\Dollar_Change\Dollar_Change\bin\Debug\Dollar_Change.pdb
+D:\vs projecs\Dollar_Change\Dollar_Change\obj\Debug\Dollar_Change.csprojAssemblyReference.cache
+D:\vs projecs\Dollar_Change\Dollar_Change\obj\Debug\Dollar_Change.csproj.CoreCompileInputs.cache
+D:\vs projecs\Dollar_Change\Dollar_Change\obj\Debug\Dollar_Change.exe
+D:\vs projecs\Dollar_Change\Dollar_Change\obj\Debug\Dollar_Change.pdb
